@@ -1,7 +1,6 @@
+import 'package:carrier/homePage.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
-import 'package:flutter_application/KYCpage.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -164,7 +163,7 @@ class _RegisterPageState extends State<SignUpPage> {
                         // Navigate to KYCpage
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => KYCpage()),
+                          MaterialPageRoute(builder: (context) => const HomePage()),
                         );
                       }
                     },
@@ -181,8 +180,8 @@ class _RegisterPageState extends State<SignUpPage> {
                     left: 10, //Position of already account
                     top: 20,
                     child: SizedBox(
-                      width: 344.49,
-                      height: 110.79,
+                      width: 300,
+                      height: 100,
                       child: Text(
                         'Sign up with',
                         textAlign: TextAlign.center,
@@ -200,30 +199,30 @@ class _RegisterPageState extends State<SignUpPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      // Image.asset(
+                      //   'assets/images/apple_logo.png',
+                      //   width: 38.0,
+                      //   height: 38.0,
+                      // ),
+                      // const SizedBox(width: 26.0),
+                      // Image.asset(
+                      //   'assets/images/fb_logo.png',
+                      //   width: 38.0,
+                      //   height: 38.0,
+                      // ),
+                      // const SizedBox(width: 26.0),
                       Image.asset(
-                        'assets/images/apple_logo.png',
-                        width: 38.0,
-                        height: 38.0,
-                      ),
-                      const SizedBox(width: 26.0),
-                      Image.asset(
-                        'assets/images/fb_logo.png',
-                        width: 38.0,
-                        height: 38.0,
-                      ),
-                      const SizedBox(width: 26.0),
-                      Image.asset(
-                        'assets/images/google_logo.png',
+                        'assets/google.png',
                         width: 38.0,
                         height: 38.0,
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 223.89,
                     height: 73.37,
                     child: Stack(
-                      children: [
+                      children: const [
                         Positioned(
                           left: 163, //Position of Signin
                           top: 60,

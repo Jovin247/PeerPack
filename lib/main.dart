@@ -1,3 +1,4 @@
+import 'package:carrier/SignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:carrier/login.dart';
 

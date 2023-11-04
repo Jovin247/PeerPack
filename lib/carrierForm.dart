@@ -109,7 +109,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         Row(
                           children: const [
                             Text(
-                              'Journey Details',
+                              'Carrier Details',
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,

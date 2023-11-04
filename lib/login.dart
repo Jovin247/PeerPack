@@ -1,3 +1,4 @@
+import 'package:carrier/SignUp.dart';
 import 'package:carrier/carrierForm.dart';
 import 'package:carrier/homePage.dart';
 import 'package:flutter/material.dart';
@@ -173,6 +174,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               ),
                               onPressed: () {
                                 // sign_up();//////////////////////////////////////////////////////////////
+                                const SignUpPage();
                               },
                             )
                           ],

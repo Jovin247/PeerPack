@@ -1,10 +1,9 @@
 import 'package:carrier/carrierForm.dart';
 import 'package:carrier/contentBlock.dart';
 import 'package:carrier/dateBlock.dart';
+import 'package:carrier/senderForm.dart';
 import 'package:carrier/settingsButton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sizer/sizer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,6 +20,10 @@ class _HomePageState extends State<HomePage> {
       const BottomNavigationBarItem(
         icon: Icon(Icons.person),
         label: "Sender",
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.shop),
+        label: "Market",
       ),
       const BottomNavigationBarItem(
         icon: Icon(Icons.travel_explore),
@@ -40,10 +43,16 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       elevation: 0,
       onTap: (int index) {
-        if (index == 1) { // Index 2 corresponds to the notifications icon
+        if (index == 1) {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const carrierForm()),
+          );
+        }
+        else if (index == 2) { // Index 2 corresponds to the notifications icon
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const senderForm()),
           );
         }
       },
@@ -82,17 +91,6 @@ class _HomePageState extends State<HomePage> {
             },
             validator: (val) {
               return null;
-
-              // if (val == null || val.isEmpty) {
-              //   return "Please enter the password";
-              // } else if (formKey == _formGlobalKey2) {
-              //   if (password1 != val) return "Passwords don't match";
-              //   return null;
-              // } else if (val.length < 8) {
-              //   return "Use a longer password";
-              // }
-
-              // return null;
             },
             keyboardType: TextInputType.text,
             obscureText: isPassword,
